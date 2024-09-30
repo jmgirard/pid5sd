@@ -16,13 +16,13 @@ db <- sd_database(
 server <- function(input, output, session) {
 
   survey_data <- sd_get_data(db, refresh_interval = 10)
-  
+
   output$my_table <- shiny::renderTable({
     df <- survey_data()
     df2 <- df[nrow(df), sprintf("bf_%03d", 1:25)]
     hitop::score_pid5bf(df2)
   })
-  
+
   # Define any conditional skip logic here (skip to page if a condition is true)
   #sd_skip_if()
 
