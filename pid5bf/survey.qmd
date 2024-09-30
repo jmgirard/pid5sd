@@ -1,0 +1,73 @@
+---
+echo: false
+warning: false
+---
+
+```{r}
+library(surveydown)
+library(hitop)
+
+items <- read.csv("pid_items.csv")
+
+options <- c(
+  "Very False or Often False" = "0",
+  "Sometimes or Somewhat False" = "1",
+  "Sometimes or Somewhat True" = "2",
+  "Very True or Often True" = "3"
+)
+```
+
+::: {#welcome .sd-page}
+
+# Welcome to our survey!
+
+Welcome! You will be asked to complete a series of questions about your mental health.
+
+```{r}
+sd_next()
+```
+
+:::
+
+::: {#page2 .sd-page}
+
+```{r}
+# Select version
+version <- "PID5BF"
+
+# Filter version items
+vitems <- items[!is.na(items[[version]]), ]
+
+# Loop through version items
+shiny::tagList(
+  lapply(
+    1:nrow(vitems), 
+    \(i) sd_question(
+      id = sprintf("bf_%03d", vitems[[i, version]]),
+      type = "mc",
+      label = vitems[[i, "Stem"]],
+      option = options
+    )
+  ),
+  sd_next(label = "Show Results")
+)
+```
+
+:::
+
+::: {#end .sd-page}
+
+## End
+
+Here are your scores:
+
+```{r}
+shiny::tableOutput('my_table')
+```
+
+
+```{r}
+sd_close("Exit Survey")
+```
+
+:::
