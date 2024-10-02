@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="welcome" class="sd-page">
 <section id="welcome-to-our-survey" class="level1">
 <h1>Welcome to our survey!</h1>
-<p>Welcome! You will be asked to complete a series of questions about your mental health.</p>
+<p>You will be provided with a list of things different people might say about themselves. We are interested in how you would describe yourself. There are no “right” or “wrong” answers. We’d like you to take your time and read each statement carefully, selecting the response that best describes you.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 </div>
-<div id="page2" class="sd-page">
 <div class="cell">
 <div class="cell-output-display">
+<div id="page1" class="sd-page">
 <div id="container-bf_001" data-question-id="bf_001" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_001_interacted', true, {priority: 'event'});">
 <div id="bf_001" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_001-label">
 <label class="control-label" id="bf_001-label" for="bf_001"><p>People would describe me as reckless. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
@@ -396,6 +396,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Next</button>
+</div>
+<script>
+    $(document).ready(function() {
+        var buttonId = 'page_id_next';
+        $(document).on('keydown', function(event) {
+            if (event.key === 'Enter' && !event.repeat) {
+                var $button = $('#' + buttonId);
+                if ($button.is(':visible')) {
+                    $button.click();
+                    event.preventDefault();
+                }
+            }
+        });
+    });
+    </script>
+</div>
+<div id="page2" class="sd-page">
 <div id="container-bf_011" data-question-id="bf_011" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_011_interacted', true, {priority: 'event'});">
 <div id="bf_011" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_011-label">
 <label class="control-label" id="bf_011-label" for="bf_011"><p>I get stuck on one way of doing things, even when it’s clear it won’t work. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
@@ -716,6 +735,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Next</button>
+</div>
+<script>
+    $(document).ready(function() {
+        var buttonId = 'page_id_next';
+        $(document).on('keydown', function(event) {
+            if (event.key === 'Enter' && !event.repeat) {
+                var $button = $('#' + buttonId);
+                if ($button.is(':visible')) {
+                    $button.click();
+                    event.preventDefault();
+                }
+            }
+        });
+    });
+    </script>
+</div>
+<div id="page3" class="sd-page">
 <div id="container-bf_021" data-question-id="bf_021" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_021_interacted', true, {priority: 'event'});">
 <div id="bf_021" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_021-label">
 <label class="control-label" id="bf_021-label" for="bf_021"><p>I often have thoughts that make sense to me but that other people say are strange. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
@@ -877,7 +915,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Show Results</button>
+<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Next</button>
 </div>
 <script>
     $(document).ready(function() {

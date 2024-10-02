@@ -7,7 +7,14 @@ warning: false
 library(surveydown)
 library(hitop)
 
+# Read items from file
 items <- read.csv("pid_items.csv")
+
+# Select version
+version <- "PID5BF"
+
+# Filter version items
+vitems <- items[!is.na(items[[version]]), ]
 
 options <- c(
   "Very False or Often False" = "0",
@@ -21,7 +28,7 @@ options <- c(
 
 # Welcome to our survey!
 
-Welcome! You will be asked to complete a series of questions about your mental health.
+You will be provided with a list of things different people might say about themselves. We are interested in how you would describe yourself. There are no "right" or "wrong" answers. We’d like you to take your time and read each statement carefully, selecting the response that best describes you.
 
 ```{r}
 sd_next()
@@ -29,31 +36,41 @@ sd_next()
 
 :::
 
-::: {#page2 .sd-page}
-
 ```{r}
-# Select version
-version <- "PID5BF"
+# Loop up total number of items
+ni <- nrow(vitems)
 
-# Filter version items
-vitems <- items[!is.na(items[[version]]), ]
+# Set desired number of items per page
+ipp <- 10
 
-# Loop through version items
-shiny::tagList(
-  lapply(
-    1:nrow(vitems), 
-    \(i) sd_question(
+# Initialize tag list
+out <- shiny::tagList()
+
+# Loop through pages
+for (p in 1:(ceiling(ni / ipp))) {
+  # Find items on current page
+  pitems <- (ipp * (p - 1) + 1):min(p*ipp, ni)
+  
+  # Add page start div opener to tag list
+  out <- shiny::tagList(out, htmltools::HTML(
+    paste0('<div id="page', p, '" class="sd-page">')
+  ))
+
+  # For each item on current page
+  for (i in pitems) {
+    # Add question to tagList
+    out <- shiny::tagList(out, sd_question(
       id = sprintf("bf_%03d", vitems[[i, version]]),
       type = "mc",
       label = vitems[[i, "Stem"]],
       option = options
-    )
-  ),
-  sd_next(label = "Show Results")
-)
+    ))
+  }
+  # At the end of each page, add next button
+  out <- shiny::tagList(out, sd_next(), htmltools::HTML('</div>'))
+}
+out
 ```
-
-:::
 
 ::: {#end .sd-page}
 

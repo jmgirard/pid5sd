@@ -19,7 +19,7 @@ server <- function(input, output, session) {
 
   output$my_table <- shiny::renderTable({
     df <- survey_data()
-    df2 <- df[nrow(df), sprintf("bf_%03d", 1:25)]
+    df2 <- df[df$session_id == session$token, sprintf("bf_%03d", 1:25)]
     hitop::score_pid5bf(df2)
   })
 
