@@ -7,7 +7,7 @@ db <- sd_database(
   dbname = "postgres",
   port   = "6543",
   user   = "postgres.outtobdgbkorhxfkpijc",
-  table  = "newpid",
+  table  = "pid5bf",
   ignore = FALSE
 )
 
@@ -32,7 +32,6 @@ server <- function(input, output, session) {
   # Database designation and other settings
   sd_server(
     db = db,
-    use_html = TRUE,
     admin_page = TRUE
   )
 

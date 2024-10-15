@@ -53,22 +53,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell">
 <div class="cell-output-display">
 <div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Next</button>
+<button class="btn btn-default action-button sd-enter-button" id="page_id_next" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));" style="display: block; margin: auto;" type="button">Next</button>
 </div>
-<script>
-    $(document).ready(function() {
-        var buttonId = 'page_id_next';
-        $(document).on('keydown', function(event) {
-            if (event.key === 'Enter' && !event.repeat) {
-                var $button = $('#' + buttonId);
-                if ($button.is(':visible')) {
-                    $button.click();
-                    event.preventDefault();
-                }
-            }
-        });
-    });
-    </script>
 </div>
 </div>
 </section>
@@ -78,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="page1" class="sd-page">
 <div id="container-bf_001" data-question-id="bf_001" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_001_interacted', true, {priority: 'event'});">
 <div id="bf_001" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_001-label">
-<label class="control-label" id="bf_001-label" for="bf_001"><p>People would describe me as reckless. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_001-label" for="bf_001"><p>People would describe me as reckless.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -107,10 +93,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_002" data-question-id="bf_002" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_002_interacted', true, {priority: 'event'});">
 <div id="bf_002" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_002-label">
-<label class="control-label" id="bf_002-label" for="bf_002"><p>I feel like I act totally on impulse. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_002-label" for="bf_002"><p>I feel like I act totally on impulse.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -139,10 +126,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_003" data-question-id="bf_003" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_003_interacted', true, {priority: 'event'});">
 <div id="bf_003" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_003-label">
-<label class="control-label" id="bf_003-label" for="bf_003"><p>Even though I know better, I can’t stop making rash decisions. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_003-label" for="bf_003"><p>Even though I know better, I can’t stop making rash decisions.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -171,10 +159,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_004" data-question-id="bf_004" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_004_interacted', true, {priority: 'event'});">
 <div id="bf_004" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_004-label">
-<label class="control-label" id="bf_004-label" for="bf_004"><p>I often feel like nothing I do really matters. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_004-label" for="bf_004"><p>I often feel like nothing I do really matters.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -203,10 +192,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_005" data-question-id="bf_005" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_005_interacted', true, {priority: 'event'});">
 <div id="bf_005" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_005-label">
-<label class="control-label" id="bf_005-label" for="bf_005"><p>Others see me as irresponsible. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_005-label" for="bf_005"><p>Others see me as irresponsible.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -235,10 +225,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_006" data-question-id="bf_006" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_006_interacted', true, {priority: 'event'});">
 <div id="bf_006" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_006-label">
-<label class="control-label" id="bf_006-label" for="bf_006"><p>I’m not good at planning ahead. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_006-label" for="bf_006"><p>I’m not good at planning ahead.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -267,10 +258,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_007" data-question-id="bf_007" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_007_interacted', true, {priority: 'event'});">
 <div id="bf_007" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_007-label">
-<label class="control-label" id="bf_007-label" for="bf_007"><p>My thoughts often don’t make sense to others. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_007-label" for="bf_007"><p>My thoughts often don’t make sense to others.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -299,10 +291,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_008" data-question-id="bf_008" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_008_interacted', true, {priority: 'event'});">
 <div id="bf_008" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_008-label">
-<label class="control-label" id="bf_008-label" for="bf_008"><p>I worry about almost everything. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_008-label" for="bf_008"><p>I worry about almost everything.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -331,10 +324,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_009" data-question-id="bf_009" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_009_interacted', true, {priority: 'event'});">
 <div id="bf_009" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_009-label">
-<label class="control-label" id="bf_009-label" for="bf_009"><p>I get emotional easily, often for very little reason. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_009-label" for="bf_009"><p>I get emotional easily, often for very little reason.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -363,10 +357,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_010" data-question-id="bf_010" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_010_interacted', true, {priority: 'event'});">
 <div id="bf_010" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_010-label">
-<label class="control-label" id="bf_010-label" for="bf_010"><p>I fear being alone in life more than anything else. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_010-label" for="bf_010"><p>I fear being alone in life more than anything else.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -395,29 +390,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Next</button>
+<button class="btn btn-default action-button sd-enter-button" id="page_id_next" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));" style="display: block; margin: auto;" type="button">Next</button>
 </div>
-<script>
-    $(document).ready(function() {
-        var buttonId = 'page_id_next';
-        $(document).on('keydown', function(event) {
-            if (event.key === 'Enter' && !event.repeat) {
-                var $button = $('#' + buttonId);
-                if ($button.is(':visible')) {
-                    $button.click();
-                    event.preventDefault();
-                }
-            }
-        });
-    });
-    </script>
 </div>
 <div id="page2" class="sd-page">
 <div id="container-bf_011" data-question-id="bf_011" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_011_interacted', true, {priority: 'event'});">
 <div id="bf_011" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_011-label">
-<label class="control-label" id="bf_011-label" for="bf_011"><p>I get stuck on one way of doing things, even when it’s clear it won’t work. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_011-label" for="bf_011"><p>I get stuck on one way of doing things, even when it’s clear it won’t work.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -446,10 +428,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_012" data-question-id="bf_012" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_012_interacted', true, {priority: 'event'});">
 <div id="bf_012" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_012-label">
-<label class="control-label" id="bf_012-label" for="bf_012"><p>I have seen things that weren’t really there. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_012-label" for="bf_012"><p>I have seen things that weren’t really there.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -478,10 +461,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_013" data-question-id="bf_013" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_013_interacted', true, {priority: 'event'});">
 <div id="bf_013" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_013-label">
-<label class="control-label" id="bf_013-label" for="bf_013"><p>I steer clear of romantic relationships. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_013-label" for="bf_013"><p>I steer clear of romantic relationships.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -510,10 +494,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_014" data-question-id="bf_014" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_014_interacted', true, {priority: 'event'});">
 <div id="bf_014" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_014-label">
-<label class="control-label" id="bf_014-label" for="bf_014"><p>I’m not interested in making friends. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_014-label" for="bf_014"><p>I’m not interested in making friends.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -542,10 +527,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_015" data-question-id="bf_015" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_015_interacted', true, {priority: 'event'});">
 <div id="bf_015" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_015-label">
-<label class="control-label" id="bf_015-label" for="bf_015"><p>I get irritated easily by all sorts of things. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_015-label" for="bf_015"><p>I get irritated easily by all sorts of things.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -574,10 +560,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_016" data-question-id="bf_016" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_016_interacted', true, {priority: 'event'});">
 <div id="bf_016" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_016-label">
-<label class="control-label" id="bf_016-label" for="bf_016"><p>I don’t like to get too close to people. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_016-label" for="bf_016"><p>I don’t like to get too close to people.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -606,10 +593,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_017" data-question-id="bf_017" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_017_interacted', true, {priority: 'event'});">
 <div id="bf_017" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_017-label">
-<label class="control-label" id="bf_017-label" for="bf_017"><p>It’s no big deal if I hurt other peoples’ feelings. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_017-label" for="bf_017"><p>It’s no big deal if I hurt other peoples’ feelings.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -638,10 +626,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_018" data-question-id="bf_018" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_018_interacted', true, {priority: 'event'});">
 <div id="bf_018" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_018-label">
-<label class="control-label" id="bf_018-label" for="bf_018"><p>I rarely get enthusiastic about anything. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_018-label" for="bf_018"><p>I rarely get enthusiastic about anything.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -670,10 +659,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_019" data-question-id="bf_019" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_019_interacted', true, {priority: 'event'});">
 <div id="bf_019" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_019-label">
-<label class="control-label" id="bf_019-label" for="bf_019"><p>I crave attention. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_019-label" for="bf_019"><p>I crave attention.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -702,10 +692,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_020" data-question-id="bf_020" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_020_interacted', true, {priority: 'event'});">
 <div id="bf_020" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_020-label">
-<label class="control-label" id="bf_020-label" for="bf_020"><p>I often have to deal with people who are less important than me. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_020-label" for="bf_020"><p>I often have to deal with people who are less important than me.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -734,29 +725,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Next</button>
+<button class="btn btn-default action-button sd-enter-button" id="page_id_next" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));" style="display: block; margin: auto;" type="button">Next</button>
 </div>
-<script>
-    $(document).ready(function() {
-        var buttonId = 'page_id_next';
-        $(document).on('keydown', function(event) {
-            if (event.key === 'Enter' && !event.repeat) {
-                var $button = $('#' + buttonId);
-                if ($button.is(':visible')) {
-                    $button.click();
-                    event.preventDefault();
-                }
-            }
-        });
-    });
-    </script>
 </div>
 <div id="page3" class="sd-page">
 <div id="container-bf_021" data-question-id="bf_021" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_021_interacted', true, {priority: 'event'});">
 <div id="bf_021" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_021-label">
-<label class="control-label" id="bf_021-label" for="bf_021"><p>I often have thoughts that make sense to me but that other people say are strange. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_021-label" for="bf_021"><p>I often have thoughts that make sense to me but that other people say are strange.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -785,10 +763,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_022" data-question-id="bf_022" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_022_interacted', true, {priority: 'event'});">
 <div id="bf_022" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_022-label">
-<label class="control-label" id="bf_022-label" for="bf_022"><p>I use people to get what I want. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_022-label" for="bf_022"><p>I use people to get what I want.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -817,10 +796,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_023" data-question-id="bf_023" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_023_interacted', true, {priority: 'event'});">
 <div id="bf_023" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_023-label">
-<label class="control-label" id="bf_023-label" for="bf_023"><p>I often ‘zone out’ and then suddenly come to and realize that a lot of time has passed. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_023-label" for="bf_023"><p>I often ‘zone out’ and then suddenly come to and realize that a lot of time has passed.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -849,10 +829,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_024" data-question-id="bf_024" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_024_interacted', true, {priority: 'event'});">
 <div id="bf_024" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_024-label">
-<label class="control-label" id="bf_024-label" for="bf_024"><p>Things around me often feel unreal, or more real than usual. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_024-label" for="bf_024"><p>Things around me often feel unreal, or more real than usual.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -881,10 +862,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div id="container-bf_025" data-question-id="bf_025" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('bf_025_interacted', true, {priority: 'event'});">
 <div id="bf_025" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="bf_025-label">
-<label class="control-label" id="bf_025-label" for="bf_025"><p>It is easy for me to take advantage of others. <span class="required-asterisk" style="display:none; color: red; font-size: 1.5em; vertical-align: middle; position: relative; top: 0.1em;">*</span></p>
+<label class="control-label" id="bf_025-label" for="bf_025"><p>It is easy for me to take advantage of others.</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -913,24 +895,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<span class="hidden-asterisk">*</span>
 </div>
 <div data-next-page="" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-<button id="page_id_next" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));">Next</button>
+<button class="btn btn-default action-button sd-enter-button" id="page_id_next" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));" style="display: block; margin: auto;" type="button">Next</button>
 </div>
-<script>
-    $(document).ready(function() {
-        var buttonId = 'page_id_next';
-        $(document).on('keydown', function(event) {
-            if (event.key === 'Enter' && !event.repeat) {
-                var $button = $('#' + buttonId);
-                if ($button.is(':visible')) {
-                    $button.click();
-                    event.preventDefault();
-                }
-            }
-        });
-    });
-    </script>
 </div>
 </div>
 </div>
@@ -945,21 +914,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell">
 <div class="cell-output-display">
 <div style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-<button id="close-survey-button" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="window.close(); if (!window.closed) { alert('Please close this tab manually to exit the survey.'); }">Exit Survey</button>
+<button class="btn btn-default action-button sd-enter-button" id="close-survey-button" onclick="Shiny.setInputValue('show_exit_modal', true, {priority: 'event'});" style="display: block; margin: auto;" type="button">Exit Survey</button>
 </div>
 <script>
-    $(document).ready(function() {
-        var buttonId = 'close-survey-button';
-        $(document).on('keydown', function(event) {
-            if (event.key === 'Enter' && !event.repeat) {
-                var $button = $('#' + buttonId);
-                if ($button.is(':visible')) {
-                    $button.click();
-                    event.preventDefault();
-                }
-            }
-        });
-    });
+      Shiny.addCustomMessageHandler('closeWindow', function(message) {
+        window.close();
+        if (!window.closed) {
+          alert('Please close this tab manually to exit the survey.');
+        }
+      });
     </script>
 </div>
 </div>
